@@ -1,4 +1,7 @@
-# Apple Books EPUB Cleaner - macOS Right-Click Script Setup
+# Apple Books EPUB Cleaner
+
+This script can be run both from the command line and as an AppleScript action for seamless integration with macOS Finder.
+
 
 ## What This Does
 
@@ -14,9 +17,45 @@ The script cleans EPUB files by:
 `EPUB_Cleaner.applescript` - AppleScript wrapper for macOS integration
 
 
+## Setup Instructions 
+
+### Step 1: Clone or download this git repository
+
+
+### Step 2: Make the Shell Script Executable
+
+Open Terminal and navigate to the directory containing `clean_epub.sh`:
+
+```bash
+cd /path/to/your/downloaded/directory
+chmod +x clean_epub.sh
+```
+
+
 ## Setup Options
 
-### Option 1: Automator Quick Action (Recommended)
+### Option 1: Command Line Usage
+
+![Command line usage](screenshot-0.png)
+
+
+For advanced users who prefer the command line:
+
+1. **Make the script executable**
+   ```bash
+   chmod +x clean_epub.sh
+   ```
+
+2. **Run directly**
+   ```bash
+   ./clean_epub.sh file1.epub file2.epub file3.epub
+   ```
+
+
+### Option 2: Automator Quick Action (Recommended for non-technical users)
+
+![AppleScript action](screenshot-1.png)
+
 
 This creates a true right-click context menu item in Finder:
 
@@ -62,58 +101,6 @@ This creates a true right-click context menu item in Finder:
 6. **Update the Script Path**
    - In the shell script you just added, update the `SCRIPT_DIR` variable to point to where you saved `clean_epub.sh`
 
-
-### Option 2: Command Line Usage
-
-For advanced users who prefer the command line:
-
-1. **Make the script executable**
-   ```bash
-   chmod +x clean_epub.sh
-   ```
-
-2. **Run directly**
-   ```bash
-   ./clean_epub.sh file1.epub file2.epub file3.epub
-   ```
-
-## Setup Instructions 
-
-### Step 0: Clone or download this git repository
-
-
-### Step 1: Make the Shell Script Executable
-
-Open Terminal and navigate to the directory containing `clean_epub.sh`:
-
-```bash
-cd /path/to/your/script/directory
-chmod +x clean_epub.sh
-```
-
-### Step 2: Test the Script
-
-Test with a single EPUB file:
-
-```bash
-./clean_epub.sh your_test_file.epub
-```
-
-You should see output like:
-```
-Processing: your_test_file.epub
-  ✓ Extracted epub contents
-  ✓ Removed iTunesMetadata.plist
-  ✓ Created cleaned epub: your_test_file_cleaned.epub
-
-Summary:
-  Processed: 1 files
-  Failed: 0 files
-```
-
-### Step 3: Set Up Right-Click Functionality
-
-Follow **Option 1** above for the best experience.
 
 
 ## Troubleshooting
