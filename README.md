@@ -1,15 +1,7 @@
 # Apple Books EPUB Cleaner
 
-A tool to clean EPUB files exported from Apple Books by removing Apple-specific metadata. This tool was created after discovering that Apple Books' exported EPUBs often cause issues when uploading to Calibre-web and other self-hosted ebook library systems due to their non-standard format.
-
-This is useful for anyone who wants to:
-
-- Export EPUBs from Apple Books for use in other e-readers
-- Remove Apple's DRM-free but proprietary metadata 
-- Create clean, standard-compliant EPUB files
-- Upload books to Calibre-web or similar self-hosted libraries
-- Share EPUBs with users of other e-readers
-
+Apple Books' exported EPUBs often cause issues when uploading to Calibre-web and other self-hosted ebook library systems due to their non-standard format.
+This is a tool to clean EPUB files exported from Apple Books by removing Apple-specific metadata.
 
 This script can be run both from the command line and as an AppleScript action for seamless integration with macOS Finder.
 
@@ -148,4 +140,10 @@ You can modify the shell script to:
 - Change the output filename pattern (currently adds `_cleaned`)
 - Remove other unwanted files from EPUBs
 - Change the output directory
-- Add additional processing steps 
+- Add additional processing steps
+
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) — feel free to use, modify, and share it however you like.  
+No complicated rules, no strings attached — just keep the original license and give credit where it’s due. Enjoy!
